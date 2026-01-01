@@ -1,9 +1,4 @@
-import React, { useMemo} from 'react'
-
-export const Header = ({cart,deleteFromCart,incrementarCantidad,decrementarCant,vaciarCarrito}) => {
-  const isEmpty = useMemo(()=> cart.length === 0,[cart])
-  const carTotal = useMemo(() => cart.reduce((total,item)=>total+(item.quantity*item.price),0),[cart])
- 
+export const Header = ({cart,deleteFromCart,incrementarCantidad,decrementarCant,vaciarCarrito,isEmpty,carTotal}) => {
   return (
     <div>
         <header className="py-5 header">

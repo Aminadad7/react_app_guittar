@@ -1,4 +1,4 @@
-import { useState,useEffect } from "react"
+import { useState,useEffect,useMemo } from "react"
 import {db} from "../data/db"
 export const useCart = ()=>{
     const initialCart = () => {//funcion para mantener el carrito ya guardado en el localstore
@@ -64,6 +64,9 @@ function deleteFromCart(id){
     console.log("Eliminnando... ", id)
     setCart(cart => cart.filter(guitar => guitar.id !== id))
   }
+  //States derivados
+  const isEmpty = useMemo(()=> cart.length === 0,[cart])
+  const carTotal = useMemo(() => cart.reduce((total,item)=>total+(item.quantity*item.price),0),[cart])
 
     return {
         data,
@@ -72,6 +75,8 @@ function deleteFromCart(id){
         vaciarCarrito,
         incrementarCantidad,
         decrementarCant,
-        deleteFromCart
+        deleteFromCart,
+        isEmpty,
+        carTotal
     }
 }
