@@ -509,6 +509,20 @@ button:not(:disabled),
   --bs-btn-disabled-border-color: #262626;
 }
 
+.btn-warning {
+  --bs-btn-color: #000;
+  --bs-btn-bg: #FFF768;
+  --bs-btn-border-color: #543737;
+  --bs-btn-hover-color: #0510A4;
+  --bs-btn-hover-bg: #EAF215;
+  --bs-btn-hover-border-color: #F6F6F9;
+  border-radius: 10px;
+  float: right;
+ 
+}
+.block{
+  width:100%;
+}
 .nav {
   --bs-nav-link-padding-x: 1rem;
   --bs-nav-link-padding-y: 0.5rem;
@@ -676,6 +690,9 @@ button:not(:disabled),
 
 .text-end {
   text-align: right !important;
+  color: blue;
+  font-size: 1.1em;
+  
 }
 
 .text-center {
@@ -776,4 +793,20 @@ button:not(:disabled),
     animation-name: animarImagen;
     z-index: 10;
   }
+}
+.alert-success{
+  background-color: #11B708;
+  padding: 5px;
+  color: #fff;
+  text-align: center;
+  margin:5px;
+  border-radius: 5px;
+}
+.alert-danger{
+  background-color: #F64403;
+  padding: 5px;
+  color: #fff;
+  text-align: center;
+  margin:5px;
+  border-radius: 5px;
 }

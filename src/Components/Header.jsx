@@ -24,6 +24,7 @@ export const Header = ({cart,deleteFromCart,incrementarCantidad,decrementarCant,
                             ):(
 
                             <>
+                            <h3 className="text-center btn btn-dark block">Productos en el carrito</h3>
                             <table className="w-100 table">
                                 <thead>
                                     <tr>
@@ -55,7 +56,7 @@ export const Header = ({cart,deleteFromCart,incrementarCantidad,decrementarCant,
                                             >
                                                 -
                                             </button>
-                                                {guitar.quantity}
+                                                <span className="text-end">{guitar.quantity}</span>
                                             <button
                                                 type="button"
                                                 className="btn btn-dark"
@@ -82,6 +83,7 @@ export const Header = ({cart,deleteFromCart,incrementarCantidad,decrementarCant,
                                 </tbody>
                             </table>
                             <p className="text-end">Total pagar: <span className="fw-bold">{carTotal}</span></p>
+                            <button className="btn btn-warning w-50 mt-3 p-2">Pagar</button>
                             <button 
                             className="btn btn-dark w-100 mt-3 p-2"
                             onClick={vaciarCarrito}>Vaciar Carrito</button>

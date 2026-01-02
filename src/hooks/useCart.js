@@ -15,22 +15,23 @@ useEffect(()=>{
   localStorage.setItem("carrito",JSON.stringify(cart))
 },[cart])
 
+useEffect(()=>{
+
+})
 function addToCart(item){
+  
   item.quantity = 1
     const itemExist = cart.findIndex((car)=>car.id==item.id) 
     
     if(itemExist >=0 ){
-    console.log("Existe ya")
+    alert("Este producto ya esta en el carrito")
     
   }else{
     console.log("No Existe")
-    setCart([...cart, item])
-      
-  }
+    let conf = confirm("Quieres guardar este producto en carrito?")
+    if(conf) setCart([...cart, item])
+    }
  
-  
- 
-  
 }
 function vaciarCarrito(){
   let confirmacion = confirm("Desea Vaciar el carrito?")

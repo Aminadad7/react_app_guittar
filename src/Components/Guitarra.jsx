@@ -2,6 +2,7 @@ import React from 'react'
 
 export const Guitarra = ({guitar,addToCart}) => {
     const {image,name,description,price} = guitar
+  
    
   return (
     <div className="col-md-6 col-lg-4 my-4 row align-items-center">
@@ -17,6 +18,7 @@ export const Guitarra = ({guitar,addToCart}) => {
                         className="btn btn-dark w-100"
                         onClick={()=>addToCart(guitar)}
                     >Agregar al Carrito</button>
+                    
                 </div>
             </div>
   )
